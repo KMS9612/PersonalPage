@@ -43,6 +43,7 @@ export default function Main_Project({
       <div className="w-full flex justify-center gap-10">
         {projectArr.map((e) => (
           <Main_Card
+            key={e.name + e.describe}
             handleModal={handleModal}
             name={e.name}
             subText={e.describe}

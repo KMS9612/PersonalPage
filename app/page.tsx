@@ -14,11 +14,11 @@ import SideBar from "./component/sidebar";
 import Modal_Project from "./component/modal_project";
 
 interface IRefMap {
-  Main: MutableRefObject<null>;
-  "About Me": MutableRefObject<null>;
-  Project: MutableRefObject<null>;
-  Contact: MutableRefObject<null>;
-  [key: string]: MutableRefObject<null>;
+  Main: MutableRefObject<null> | any;
+  "About Me": MutableRefObject<null> | any;
+  Project: MutableRefObject<null> | any;
+  Contact: MutableRefObject<null> | any;
+  [key: string]: MutableRefObject<null> | any;
 }
 
 export default function Home() {
