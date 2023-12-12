@@ -6,7 +6,7 @@ export default function SideBar({
   onClickSideMenu: (e: MouseEvent<HTMLLIElement>) => void;
 }) {
   return (
-    <div className="fixed w-24 border-2 border-secBrown rounded-md top-1/2 left-1 py-2 bg-white">
+    <div className="fixed w-24 border-2 border-secBrown rounded-md top-1/2 left-1 py-2 bg-white z-20">
       <ul className="divide-y-2 font-bold text-gray-700">
         <li
           onClick={onClickSideMenu}

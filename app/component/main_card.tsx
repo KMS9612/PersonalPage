@@ -1,15 +1,18 @@
 import Image from "next/image";
+import { MouseEvent } from "react";
 
 export default function Main_Card({
   name,
   subText,
   src,
   route,
+  handleModal,
 }: {
   name: string;
   subText: string;
   src: string;
   route: string;
+  handleModal: (e: MouseEvent<HTMLDivElement>) => void;
 }) {
   const onClickRouteProject = (route: string) => {
     window.open(route);
@@ -18,7 +21,7 @@ export default function Main_Card({
     <div
       className="w-96 h-96 border-2 flex flex-col border-brown rounded-md overflow-hidden cursor-pointer"
       data-aos="fade-up"
-      onClick={() => onClickRouteProject(route)}
+      onClick={handleModal}
     >
       <div className="relative w-full h-4/6 bg-gray-600">
         <Image

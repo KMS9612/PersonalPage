@@ -1,10 +1,12 @@
-import { MutableRefObject } from "react";
+import { MouseEvent, MutableRefObject } from "react";
 import Main_Card from "./main_card";
 
 export default function Main_Project({
   targetProject,
+  handleModal,
 }: {
   targetProject: MutableRefObject<null>;
+  handleModal: (e: MouseEvent<HTMLDivElement>) => void;
 }) {
   const projectArr = [
     {
@@ -41,6 +43,7 @@ export default function Main_Project({
       <div className="w-full flex justify-center gap-10">
         {projectArr.map((e) => (
           <Main_Card
+            handleModal={handleModal}
             name={e.name}
             subText={e.describe}
             src={e.src}
