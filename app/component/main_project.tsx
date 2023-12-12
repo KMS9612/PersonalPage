@@ -1,6 +1,11 @@
+import { MutableRefObject } from "react";
 import Main_Card from "./main_card";
 
-export default function Main_Project() {
+export default function Main_Project({
+  targetProject,
+}: {
+  targetProject: MutableRefObject<null>;
+}) {
   const projectArr = [
     {
       name: "AON 회사 페이지",
@@ -12,7 +17,7 @@ export default function Main_Project() {
     {
       name: "Workout (진행중)",
       describe:
-        "TypeScript, Next.js, Express.js, TailwindCSS, MongoDB를 사용해서 제작중인 가계부 프로젝트입니다. 타입스크립트 활용과 백엔드와 프론트엔드 연동에 집중하며 제작했습니다.",
+        "React.js, Emotion, Express.js, MongoDB를 사용해서 제작중인 운동루틴 기록 서비스입니다. Rest-API의 활용과 백엔드 구현 및 프론트엔드 연동에 집중하며 제작했습니다.",
 
       src: "/workout.png",
       route: "https://workout-react.vercel.app/",
@@ -26,7 +31,10 @@ export default function Main_Project() {
     },
   ];
   return (
-    <div className="w-full h-screen flex flex-col justify-evenly items-center bg-lightBrown">
+    <div
+      ref={targetProject}
+      className="w-full h-screen flex flex-col justify-evenly items-center bg-lightBrown"
+    >
       <div className="text-5xl font-bold text-brown" data-aos="fade-up">
         Project
       </div>

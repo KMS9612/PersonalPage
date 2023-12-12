@@ -26,11 +26,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body className={`${inter.className} relative`}>
-        {/* <SideBar /> */}
-        
-        {children}
-      </body>
+      <body className={`${inter.className} relative`}>{children}</body>
     </html>
   );
 }
