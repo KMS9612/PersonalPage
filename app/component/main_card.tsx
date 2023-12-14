@@ -14,12 +14,9 @@ export default function Main_Card({
   route: string;
   handleModal: (e: MouseEvent<HTMLDivElement>) => void;
 }) {
-  const onClickRouteProject = (route: string) => {
-    window.open(route);
-  };
   return (
     <div
-      className="w-96 h-96 border-2 flex flex-col border-brown rounded-md overflow-hidden cursor-pointer"
+      className="w-96 h-96 flex flex-col rounded-md overflow-hidden cursor-pointer"
       data-aos="fade-up"
       onClick={handleModal}
     >

@@ -25,6 +25,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const [modalTarget, setModalTarget] = useState<string>("");
 
+  // AOS 라이브러리 초기화
   useEffect(() => {
     Aos.init({
       duration: 600,
@@ -35,6 +36,7 @@ export default function Home() {
     });
   }, []);
 
+  // 사이드 바 클릭시 화면 이동을 위한 RefMap 데이터
   const refMap: IRefMap = {
     Main: useRef(null),
     "About Me": useRef(null),
@@ -42,6 +44,7 @@ export default function Home() {
     Contact: useRef(null),
   };
 
+  // 사이드메뉴 버튼 클릭시 해당하는 위치로 스크롤 시키는 함수
   const onClickSideMenu = (e: MouseEvent<HTMLLIElement>) => {
     const clicked = e.currentTarget.innerHTML;
 
@@ -53,6 +56,7 @@ export default function Home() {
       });
   };
 
+  // Main의 더 알아보기 버튼 클릭시 About Me로 스크롤 시키는 함수
   const onClickWheel = () => {
     refMap["About Me"].current &&
       window.scrollTo({
@@ -61,6 +65,7 @@ export default function Home() {
       });
   };
 
+  // Project Card 클릭시 Modal_Project컴포넌트 화면에 띄우는 함수
   const handleModal = (e: MouseEvent<HTMLDivElement>) => {
     const target = e.currentTarget;
     const str = target.innerText;
@@ -72,6 +77,9 @@ export default function Home() {
     }
     if (str.includes("Vanila")) {
       setModalTarget("vanilajs");
+    }
+    if (str.includes("가계부")) {
+      setModalTarget("financial");
     }
     setIsOpen(true);
   };
