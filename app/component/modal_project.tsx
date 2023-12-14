@@ -74,8 +74,8 @@ export default function Modal_Project({
           <button
             onClick={onClickMoveToPage}
             className={`${
-              target === "financial" && "bg-gray-300"
-            } bg-secBrown rounded-full text-white text-xl font-bold w-80 h-12`}
+              target === "financial" ? "bg-gray-300" : "bg-secBrown"
+            } rounded-full text-white text-xl font-bold w-80 h-12`}
             disabled={target === "financial"}
           >
             {`${
