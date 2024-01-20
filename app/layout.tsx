@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "KimMinSeung",
-  description: "KimMinSeung's Personal Page",
+  description: "프론트엔드 개발자 김민승의 소개페이지입니다.",
 };
 
 export default function RootLayout({
@@ -24,6 +24,11 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+        />
+        title
+        <meta
+          name="naver-site-verification"
+          content="480bc4767eb8ccf83ddce8dd48f3c5877bf2b049"
         />
       </Head>
       <body className={`${inter.className} relative`}>{children}</body>
