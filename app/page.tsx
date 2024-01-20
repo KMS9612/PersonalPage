@@ -108,7 +108,6 @@ export default function Home() {
         <a href="mailto:malcomex@naver.com" className="cursor-pointer">
           Email
         </a>
-        <a className="cursor-pointer">Phone : 010-3637-7076</a>
       </footer>
     </div>
   );
