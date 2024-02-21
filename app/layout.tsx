@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import "aos/dist/aos.css";
-import SideBar from "./component/sidebar";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,7 +30,9 @@ export default function RootLayout({
           content="480bc4767eb8ccf83ddce8dd48f3c5877bf2b049"
         />
       </Head>
-      <body className={`${inter.className} relative`}>{children}</body>
+      <body className={`${inter.className} relative w-screen h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }

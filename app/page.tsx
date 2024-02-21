@@ -1,5 +1,5 @@
 "use client";
-import Main_Header from "@/app/component/main_head";
+
 import {
   MouseEvent,
   MutableRefObject,
@@ -7,11 +7,12 @@ import {
   useRef,
   useState,
 } from "react";
-import Main_AboutMe from "./component/main_aboutme";
+import Main_AboutMe from "../src/component/mainLayout/main_aboutme";
 import Aos from "aos";
-import Main_Project from "./component/main_project";
-import SideBar from "./component/sidebar";
-import Modal_Project from "./component/modal_project";
+import Modal_Project from "@/src/component/mainLayout/modal_project";
+import SideBar from "@/src/component/mainLayout/sidebar";
+import Main_Header from "@/src/component/mainLayout/main_head";
+import Main_Project from "@/src/component/mainLayout/main_project";
 
 interface IRefMap {
   Main: MutableRefObject<null> | any;

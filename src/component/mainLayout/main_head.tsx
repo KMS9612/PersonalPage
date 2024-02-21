@@ -1,6 +1,6 @@
 "use client";
 import { MutableRefObject } from "react";
-import "../style/button.css";
+import "../../../app/style/button.css";
 
 export default function Main_Header({
   targetMain,
